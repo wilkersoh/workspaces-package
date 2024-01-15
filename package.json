@@ -4,14 +4,23 @@
   "private": true,
   "author": "Wilker",
   "main": "index.js",
-  "dependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "concurrently": "^8.2.2",
+    "prettier": "^2.8.8"
   },
   "scripts": {
-    "start": "concurrently -c -n web \"npm run start -w packages/web\""
+    "start": "concurrently -c -n web \"npm run start -w packages/web\"",
+    "prepare": "husky install",
+    "lint": "npm run lint --workspaces --if-present || true"
   },
   "workspaces": [
     "packages/components",
     "packages/web"
-  ]
+  ],
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }

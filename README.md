@@ -15,3 +15,9 @@ npm i antd -w packages/components
         "@workspaces-package/components": "file:./packages/components",
     }
 ```
+
+## Prettier
+
+- **ignore-unknown** or **-u** helps ignore unknown files matched by patterns.
+  - skip those doesn't recognize, instead warinings or errors.
+- **write** helps to formatted/overwrites your files
