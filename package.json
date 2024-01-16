@@ -4,15 +4,15 @@
   "private": true,
   "author": "Wilker",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
-    "concurrently": "^8.2.2",
     "prettier": "^2.8.8"
   },
   "scripts": {
     "start": "concurrently -c -n web \"npm run start -w packages/web\"",
+    "test": "npm run test -w packages/web",
     "prepare": "husky install",
     "lint": "npm run lint --workspaces --if-present || true"
   },
