@@ -1,9 +1,10 @@
+import * as React from "react";
 import "./App.css";
 
 function App() {
     return (
         <div className="App">
-            <div>learn react</div>
+            <div>learn react, test typescript</div>
         </div>
     );
 }
